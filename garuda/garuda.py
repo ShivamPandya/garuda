@@ -18,13 +18,12 @@ def main():
 
     while True:
         try:
-            live_input = sys.stdin.readline().strip()
             with open(filename, "rb") as f:
                 newChecksum = hashlib.md5(f.read()).hexdigest()
-            if checksum != newChecksum or live_input == "rs":
+            if checksum != newChecksum:
                 run_commands(filename)
                 checksum = newChecksum
-            time.sleep(1)
+            time.sleep(0.5)
         except KeyboardInterrupt as e:
             sys.exit()
 
@@ -36,7 +35,7 @@ def banner(filename):
     print("┃    Garuda | Live Realod    ┃")
     print("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛")
     print("\033[0m")
-    print("Press ctrl+c to exit. Type rs to restart or q to quit")
+    print("Press ctrl+c to exit. Type rs to restart")
     print(f"|-> Currently executing \33[1m\33[33m{filename}\033[0m")
     print("="*(24+len(filename)),"\n")
 
