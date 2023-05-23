@@ -45,15 +45,14 @@ def banner(filename:str):
     print("="*(24+len(filename)),"\n")
 
 
-def run_commands(interpreter:list, filename:str, compile:bool):
+def run_commands(interpreter:str, filename:str, compile:bool):
     
     filename = sys.argv[1]
     subprocess.run("clear")
     banner(filename)
-    interpreter.extend([filename])
     
     try:
-        proc = subprocess.check_output(interpreter).decode("utf-8")
+        proc = subprocess.check_output([interpreter, filename]).decode("utf-8")
         print(f"{proc.strip()}", "\r")
         if compile:
             # Running the binary 

@@ -1,4 +1,4 @@
-def get_interpreter(filepath:str, compile:bool=False) -> tuple[list, str, bool]:
+def get_interpreter(filepath:str, compile:bool=False) -> tuple[str, str, bool]:
     
     extension = filepath.split(".")[-1]
     compiled = {"rs"}
@@ -11,6 +11,6 @@ def get_interpreter(filepath:str, compile:bool=False) -> tuple[list, str, bool]:
              "rb": "ruby",
              "rs": "rustc"}
     
-    interpreter: list = langs[extension].split()
+    interpreter: str = langs[extension]
 
     return (interpreter, filepath, compile)
