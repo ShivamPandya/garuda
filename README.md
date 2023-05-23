@@ -1,6 +1,13 @@
 # 🦅 GARUDA | A watcher of Python 
 
-Garuda is an active monitoring tool for python files. It restarts and run the python file automatically once the changes are saved. This tool is inspired by Nodemon.
+Garuda is an active monitoring tool for your code. It restarts and run the files automatically once the changes are saved. This tool is inspired by Nodemon.
+
+## Supported Languages
+[![Python](https://img.shields.io/badge/python-yellow?style=for-the-badge&logo=python)](https://github.com/ShivamPandya)
+[![JavaScript](https://img.shields.io/badge/javascript-blue?style=for-the-badge&logo=javascript)](https://github.com/ShivamPandya)
+[![Rust](https://shields.io/badge/rust-red?style=for-the-badge&logo=rust)](https://github.com/ShivamPandya)
+[![Ruby](https://shields.io/badge/ruby-green?style=for-the-badge&logo=ruby)](https://github.com/ShivamPandya)
+
 
 ## Pre-requisites
 - Python 3.x
@@ -25,5 +32,5 @@ pip install -e .
 
 4. Have fun with Garuda 🦅
 ``` bash
-garuda <python file>
+garuda ${file_name}
 ```
